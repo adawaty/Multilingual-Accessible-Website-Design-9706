@@ -46,7 +46,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white dark:bg-gray-900 dark-transition">
+    <section id="services" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -56,10 +56,10 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-accessible-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {t('services.title')}
           </h2>
-          <p className="text-accessible-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
             {t('services.subtitle')}
           </p>
         </motion.div>
@@ -81,17 +81,16 @@ const Services = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-accessible-xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   {t(`services.${service.key}.title`)}
                 </h3>
-                
-                <p className="text-accessible-base text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                <p className="text-base text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   {t(`services.${service.key}.description`)}
                 </p>
 
                 {/* Learn More Link */}
                 <div className={`flex items-center ${service.iconColor} font-semibold group-hover:translate-x-2 transition-transform duration-300`}>
-                  <span className="text-accessible-base">Learn More</span>
+                  <span className="text-base">Learn More</span>
                   <SafeIcon icon={FiArrowRight} className="ml-2 w-4 h-4" />
                 </div>
 
@@ -109,7 +108,7 @@ const Services = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <button className="bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-accessible-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 inline-flex items-center">
+          <button className="bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 inline-flex items-center">
             Get Started Today
             <SafeIcon icon={FiArrowRight} className="ml-2 w-5 h-5" />
           </button>

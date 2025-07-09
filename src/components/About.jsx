@@ -46,7 +46,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800 dark-transition">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -56,52 +56,48 @@ const About = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-accessible-3xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               {t('about.title')}
             </h2>
-            
-            <p className="text-accessible-xl text-gray-700 dark:text-gray-300 mb-8">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
               {t('about.subtitle')}
             </p>
-
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-facebook-100 dark:bg-facebook-900/50 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                   <SafeIcon icon={FiAward} className="w-4 h-4 text-facebook-600 dark:text-facebook-400" />
                 </div>
                 <div>
-                  <h3 className="text-accessible-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Award-Winning Design
                   </h3>
-                  <p className="text-accessible-base text-gray-700 dark:text-gray-300">
+                  <p className="text-base text-gray-700 dark:text-gray-300">
                     Our team has received multiple industry awards for innovative web design and user experience.
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                   <SafeIcon icon={FiTrendingUp} className="w-4 h-4 text-green-600 dark:text-green-400" />
                 </div>
                 <div>
-                  <h3 className="text-accessible-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Proven Results
                   </h3>
-                  <p className="text-accessible-base text-gray-700 dark:text-gray-300">
+                  <p className="text-base text-gray-700 dark:text-gray-300">
                     We deliver measurable results that help businesses grow and succeed in the digital landscape.
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                   <SafeIcon icon={FiUsers} className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="text-accessible-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     Expert Team
                   </h3>
-                  <p className="text-accessible-base text-gray-700 dark:text-gray-300">
+                  <p className="text-base text-gray-700 dark:text-gray-300">
                     Our multidisciplinary team brings together expertise in design, development, SEO, and AI.
                   </p>
                 </div>
@@ -127,17 +123,15 @@ const About = () => {
                 <div className={`w-16 h-16 ${stat.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <SafeIcon icon={stat.icon} className={`w-8 h-8 ${stat.color}`} />
                 </div>
-                
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={inView ? { scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="text-accessible-2xl font-bold text-gray-900 dark:text-white mb-2"
+                  className="text-2xl font-bold text-gray-900 dark:text-white mb-2"
                 >
                   {stat.number}
                 </motion.div>
-                
-                <p className="text-accessible-base font-medium text-gray-700 dark:text-gray-300">
+                <p className="text-base font-medium text-gray-700 dark:text-gray-300">
                   {t(`about.${stat.key}`)}
                 </p>
               </motion.div>

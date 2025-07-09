@@ -44,6 +44,10 @@
     "clients": "98% Client Satisfaction",
     "team": "Expert Team"
   },
+  "portfolio": {
+    "title": "Our Recent Work",
+    "subtitle": "Discover our latest projects and see how we've helped businesses achieve their digital goals"
+  },
   "contact": {
     "title": "Ready to Get Started?",
     "subtitle": "Let's discuss your project and create something amazing together",

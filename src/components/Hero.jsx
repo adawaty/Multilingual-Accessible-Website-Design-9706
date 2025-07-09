@@ -15,7 +15,7 @@ const Hero = () => {
   });
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-facebook-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden dark-transition">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-facebook-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden transition-colors duration-300">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-r from-facebook-600 to-blue-600 dark:from-facebook-800 dark:to-blue-900"></div>
@@ -42,7 +42,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center bg-facebook-100 dark:bg-facebook-900 text-facebook-700 dark:text-facebook-300 px-4 py-2 rounded-full text-accessible-sm font-medium mb-6"
+              className="inline-flex items-center bg-facebook-100 dark:bg-facebook-900 text-facebook-700 dark:text-facebook-300 px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <SafeIcon icon={FiStar} className="w-4 h-4 mr-2" />
               {t('hero.trusted_by')}
@@ -53,7 +53,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="text-accessible-3xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
             >
               {t('hero.title')}{' '}
               <span className="text-facebook-600 dark:text-facebook-400 bg-gradient-to-r from-facebook-600 to-blue-600 dark:from-facebook-400 dark:to-blue-400 bg-clip-text text-transparent">
@@ -66,7 +66,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4 }}
-              className="text-accessible-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               {t('hero.subtitle')}
             </motion.p>
@@ -76,7 +76,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="text-accessible-lg text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0"
+              className="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0"
             >
               {t('hero.description')}
             </motion.p>
@@ -88,12 +88,11 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <button className="group bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-accessible-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 flex items-center justify-center">
+              <button className="group bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 flex items-center justify-center">
                 {t('hero.cta_primary')}
                 <SafeIcon icon={FiArrowRight} className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
-              <button className="group bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-facebook-600 dark:text-facebook-400 border-2 border-facebook-600 dark:border-facebook-500 px-8 py-4 rounded-lg text-accessible-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 flex items-center justify-center">
+              <button className="group bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-facebook-600 dark:text-facebook-400 border-2 border-facebook-600 dark:border-facebook-500 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 flex items-center justify-center">
                 <SafeIcon icon={FiPlay} className="mr-2 w-5 h-5" />
                 {t('hero.cta_secondary')}
               </button>
@@ -116,15 +115,14 @@ const Hero = () => {
                       <SafeIcon icon={FiStar} className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-accessible-lg font-bold text-gray-900 dark:text-white">Premium Quality</h3>
-                      <p className="text-accessible-base text-gray-600 dark:text-gray-400">Award-winning designs</p>
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">Premium Quality</h3>
+                      <p className="text-base text-gray-600 dark:text-gray-400">Award-winning designs</p>
                     </div>
                   </div>
-                  
                   <div className="bg-facebook-50 dark:bg-facebook-900/50 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-accessible-base font-medium text-gray-700 dark:text-gray-300">Project Success Rate</span>
-                      <span className="text-accessible-lg font-bold text-facebook-600 dark:text-facebook-400">98%</span>
+                      <span className="text-base font-medium text-gray-700 dark:text-gray-300">Project Success Rate</span>
+                      <span className="text-lg font-bold text-facebook-600 dark:text-facebook-400">98%</span>
                     </div>
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                       <motion.div
@@ -146,7 +144,6 @@ const Hero = () => {
               >
                 <SafeIcon icon={FiStar} className="w-6 h-6 text-white" />
               </motion.div>
-              
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}

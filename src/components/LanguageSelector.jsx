@@ -17,9 +17,8 @@ const languages = [
 ];
 
 const LanguageSelector = ({ isCompact = false }) => {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const changeLanguage = (languageCode, isRtl = false) => {
@@ -29,7 +28,7 @@ const LanguageSelector = ({ isCompact = false }) => {
     setIsOpen(false);
   };
 
-  // Compact selector for accessibility toolbox
+  // Compact selector for mobile
   if (isCompact) {
     return (
       <div className="relative w-full">
@@ -59,7 +58,9 @@ const LanguageSelector = ({ isCompact = false }) => {
                   key={language.code}
                   onClick={() => changeLanguage(language.code, language.rtl)}
                   className={`w-full text-left px-4 py-2 flex items-center space-x-3 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
-                    i18n.language === language.code ? 'bg-facebook-50 dark:bg-facebook-900 text-facebook-600 dark:text-facebook-400' : 'text-gray-700 dark:text-white'
+                    i18n.language === language.code 
+                      ? 'bg-facebook-50 dark:bg-facebook-900 text-facebook-600 dark:text-facebook-400' 
+                      : 'text-gray-700 dark:text-white'
                   }`}
                 >
                   <span className="text-lg">{language.flag}</span>
@@ -79,7 +80,7 @@ const LanguageSelector = ({ isCompact = false }) => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 rounded-md hover:bg-facebook-700 dark:hover:bg-facebook-600 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
-        aria-label={t('accessibility.language_selector')}
+        aria-label="Select language"
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
@@ -101,7 +102,9 @@ const LanguageSelector = ({ isCompact = false }) => {
                 key={language.code}
                 onClick={() => changeLanguage(language.code, language.rtl)}
                 className={`w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-3 transition-colors ${
-                  i18n.language === language.code ? 'bg-facebook-50 dark:bg-facebook-900 text-facebook-600 dark:text-facebook-400' : 'text-gray-700 dark:text-white'
+                  i18n.language === language.code 
+                    ? 'bg-facebook-50 dark:bg-facebook-900 text-facebook-600 dark:text-facebook-400' 
+                    : 'text-gray-700 dark:text-white'
                 }`}
               >
                 <span className="text-lg">{language.flag}</span>

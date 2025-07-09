@@ -67,7 +67,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900 dark-transition">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -77,10 +77,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-accessible-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-accessible-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
             {t('contact.subtitle')}
           </p>
         </motion.div>
@@ -95,7 +95,7 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-accessible-base font-medium text-gray-900 dark:text-white mb-2">
+                <label htmlFor="name" className="block text-base font-medium text-gray-900 dark:text-white mb-2">
                   {t('contact.form.name')}
                 </label>
                 <input
@@ -105,13 +105,13 @@ const Contact = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-accessible-base text-gray-900 dark:text-white transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-base text-gray-900 dark:text-white transition-colors"
                   aria-describedby="name-help"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-accessible-base font-medium text-gray-900 dark:text-white mb-2">
+                <label htmlFor="email" className="block text-base font-medium text-gray-900 dark:text-white mb-2">
                   {t('contact.form.email')}
                 </label>
                 <input
@@ -121,12 +121,12 @@ const Contact = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-accessible-base text-gray-900 dark:text-white transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-base text-gray-900 dark:text-white transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-accessible-base font-medium text-gray-900 dark:text-white mb-2">
+                <label htmlFor="phone" className="block text-base font-medium text-gray-900 dark:text-white mb-2">
                   {t('contact.form.phone')}
                 </label>
                 <input
@@ -135,12 +135,12 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-accessible-base text-gray-900 dark:text-white transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-base text-gray-900 dark:text-white transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-accessible-base font-medium text-gray-900 dark:text-white mb-2">
+                <label htmlFor="service" className="block text-base font-medium text-gray-900 dark:text-white mb-2">
                   {t('contact.form.service')}
                 </label>
                 <select
@@ -149,7 +149,7 @@ const Contact = () => {
                   required
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-accessible-base text-gray-900 dark:text-white transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-base text-gray-900 dark:text-white transition-colors"
                 >
                   <option value="">Select a service</option>
                   <option value="web-design">Web Design & Development</option>
@@ -160,7 +160,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-accessible-base font-medium text-gray-900 dark:text-white mb-2">
+                <label htmlFor="message" className="block text-base font-medium text-gray-900 dark:text-white mb-2">
                   {t('contact.form.message')}
                 </label>
                 <textarea
@@ -170,13 +170,13 @@ const Contact = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-accessible-base text-gray-900 dark:text-white transition-colors resize-vertical"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 focus:border-facebook-500 dark:focus:border-facebook-400 text-base text-gray-900 dark:text-white transition-colors resize-vertical"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-accessible-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 flex items-center justify-center"
+                className="w-full bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 flex items-center justify-center"
               >
                 <SafeIcon icon={FiSend} className="mr-2 w-5 h-5" />
                 {t('contact.form.submit')}
@@ -203,10 +203,10 @@ const Contact = () => {
                   <SafeIcon icon={info.icon} className={`w-6 h-6 ${info.color}`} />
                 </div>
                 <div>
-                  <h3 className="text-accessible-lg font-semibold text-gray-900 dark:text-white mb-1">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
                     {info.title}
                   </h3>
-                  <p className="text-accessible-base text-gray-700 dark:text-gray-300">
+                  <p className="text-base text-gray-700 dark:text-gray-300">
                     {info.value}
                   </p>
                 </div>
@@ -221,10 +221,10 @@ const Contact = () => {
               className="bg-gradient-to-br from-facebook-100 to-blue-100 dark:from-facebook-900/50 dark:to-blue-900/50 rounded-xl p-8 text-center"
             >
               <SafeIcon icon={FiMapPin} className="w-16 h-16 text-facebook-600 dark:text-facebook-400 mx-auto mb-4" />
-              <h3 className="text-accessible-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 Visit Our Office
               </h3>
-              <p className="text-accessible-base text-gray-700 dark:text-gray-300">
+              <p className="text-base text-gray-700 dark:text-gray-300">
                 Schedule a meeting to discuss your project in person
               </p>
             </motion.div>

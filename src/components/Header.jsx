@@ -4,14 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 import LanguageSelector from './LanguageSelector';
-import { useAccessibility } from '../hooks/useAccessibility';
 
 const { FiMenu, FiX, FiMoon, FiSun } = FiIcons;
 
 const Header = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { darkMode, toggleDarkMode } = useAccessibility();
+  const [darkMode, setDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
@@ -23,12 +22,35 @@ const Header = () => {
     { key: 'blog', href: '#blog' },
   ];
 
+  // Handle dark mode toggle
+  const toggleDarkMode = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
+    localStorage.setItem('darkMode', newDarkMode.toString());
+  };
+
+  // Initialize dark mode from localStorage
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setDarkMode(savedDarkMode);
+    
+    if (savedDarkMode) {
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -40,15 +62,12 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0"
           >
-            <a 
-              href="#home" 
-              className="flex items-center focus:outline-none focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 rounded-md"
-            >
+            <a href="#home" className="flex items-center focus:outline-none focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400 rounded-md">
               <div className="w-10 h-10 bg-gradient-to-r from-facebook-500 to-facebook-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A</span>
               </div>
@@ -66,7 +85,7 @@ const Header = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-gray-700 dark:text-gray-200 hover:text-facebook-600 dark:hover:text-facebook-400 px-3 py-2 rounded-md text-accessible-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400"
+                  className="text-gray-700 dark:text-gray-200 hover:text-facebook-600 dark:hover:text-facebook-400 px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t(`nav.${item.key}`)}
@@ -85,17 +104,17 @@ const Header = () => {
             >
               <SafeIcon icon={darkMode ? FiSun : FiMoon} className="w-5 h-5" />
             </button>
-            
+
             {/* Language Selector - Desktop */}
             <div className="hidden md:block">
               <LanguageSelector />
             </div>
-            
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-facebook-600 dark:hover:text-facebook-400 focus:outline-none focus:ring-2 focus:ring-facebook-500 dark:focus:ring-facebook-400"
-              aria-label={t('accessibility.toggle_menu')}
+              aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >
               <SafeIcon icon={isMenuOpen ? FiX : FiMenu} className="w-6 h-6" />
@@ -127,7 +146,7 @@ const Header = () => {
               <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {t('accessibility.language')}
+                    Language
                   </span>
                   <LanguageSelector isCompact={true} />
                 </div>

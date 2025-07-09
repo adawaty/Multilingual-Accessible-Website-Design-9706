@@ -33,7 +33,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white dark-transition">
+    <footer className="bg-gray-900 dark:bg-black text-white transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -49,8 +49,7 @@ const Footer = () => {
               </div>
               <span className="ml-3 text-2xl font-bold">Adawaty</span>
             </div>
-            
-            <p className="text-accessible-base text-gray-300 mb-6 max-w-md">
+            <p className="text-base text-gray-300 mb-6 max-w-md">
               {t('footer.description')}
             </p>
 
@@ -58,15 +57,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <SafeIcon icon={FiMail} className="w-5 h-5 text-facebook-400" />
-                <span className="text-accessible-base text-gray-300">hello@adawaty.com</span>
+                <span className="text-base text-gray-300">hello@adawaty.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon icon={FiPhone} className="w-5 h-5 text-facebook-400" />
-                <span className="text-accessible-base text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-base text-gray-300">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon icon={FiMapPin} className="w-5 h-5 text-facebook-400" />
-                <span className="text-accessible-base text-gray-300">New York, NY</span>
+                <span className="text-base text-gray-300">New York, NY</span>
               </div>
             </div>
 
@@ -91,13 +90,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-accessible-lg font-semibold mb-6">{t('footer.quick_links')}</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.quick_links')}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.key}>
                   <a
                     href={link.href}
-                    className="text-accessible-base text-gray-300 hover:text-facebook-400 transition-colors duration-300 focus:outline-none focus:text-facebook-400"
+                    className="text-base text-gray-300 hover:text-facebook-400 transition-colors duration-300 focus:outline-none focus:text-facebook-400"
                   >
                     {t(`nav.${link.key}`)}
                   </a>
@@ -112,13 +111,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-accessible-lg font-semibold mb-6">{t('footer.services_title')}</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.services_title')}</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
                   <a
                     href="#services"
-                    className="text-accessible-base text-gray-300 hover:text-facebook-400 transition-colors duration-300 focus:outline-none focus:text-facebook-400"
+                    className="text-base text-gray-300 hover:text-facebook-400 transition-colors duration-300 focus:outline-none focus:text-facebook-400"
                   >
                     {service}
                   </a>
@@ -135,7 +134,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="border-t border-gray-800 mt-12 pt-8 text-center"
         >
-          <p className="text-accessible-base text-gray-400">
+          <p className="text-base text-gray-400">
             © {new Date().getFullYear()} Adawaty. {t('footer.rights')}
           </p>
         </motion.div>

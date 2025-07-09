@@ -19,34 +19,34 @@ const Services = () => {
       icon: FiMonitor,
       key: 'web_design',
       color: 'from-facebook-500 to-blue-500',
-      bgColor: 'bg-facebook-50',
-      iconColor: 'text-facebook-600',
+      bgColor: 'bg-facebook-50 dark:bg-facebook-900/30',
+      iconColor: 'text-facebook-600 dark:text-facebook-400',
     },
     {
       icon: FiSearch,
       key: 'seo',
       color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-50',
-      iconColor: 'text-green-600',
+      bgColor: 'bg-green-50 dark:bg-green-900/30',
+      iconColor: 'text-green-600 dark:text-green-400',
     },
     {
       icon: FiBrain,
       key: 'ai',
       color: 'from-purple-500 to-indigo-500',
-      bgColor: 'bg-purple-50',
-      iconColor: 'text-purple-600',
+      bgColor: 'bg-purple-50 dark:bg-purple-900/30',
+      iconColor: 'text-purple-600 dark:text-purple-400',
     },
     {
       icon: FiBookOpen,
       key: 'edtech',
       color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-50',
-      iconColor: 'text-orange-600',
+      bgColor: 'bg-orange-50 dark:bg-orange-900/30',
+      iconColor: 'text-orange-600 dark:text-orange-400',
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white dark:bg-gray-900 dark-transition">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -56,10 +56,10 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-accessible-3xl font-bold text-accessible-high-contrast mb-4">
+          <h2 className="text-accessible-3xl font-bold text-gray-900 dark:text-white mb-4">
             {t('services.title')}
           </h2>
-          <p className="text-accessible-xl text-accessible-medium-contrast max-w-3xl mx-auto">
+          <p className="text-accessible-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
             {t('services.subtitle')}
           </p>
         </motion.div>
@@ -74,18 +74,18 @@ const Services = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className={`${service.bgColor} rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer border border-gray-100`}>
+              <div className={`${service.bgColor} rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer border border-gray-100 dark:border-gray-800`}>
                 {/* Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <SafeIcon icon={service.icon} className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-accessible-xl font-bold text-accessible-high-contrast mb-4">
+                <h3 className="text-accessible-xl font-bold text-gray-900 dark:text-white mb-4">
                   {t(`services.${service.key}.title`)}
                 </h3>
                 
-                <p className="text-accessible-base text-accessible-medium-contrast mb-6 leading-relaxed">
+                <p className="text-accessible-base text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   {t(`services.${service.key}.description`)}
                 </p>
 
@@ -109,7 +109,7 @@ const Services = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <button className="bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-accessible-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 inline-flex items-center">
+          <button className="bg-facebook-600 hover:bg-facebook-700 text-white px-8 py-4 rounded-lg text-accessible-lg font-semibold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-facebook-300 dark:focus:ring-facebook-800 inline-flex items-center">
             Get Started Today
             <SafeIcon icon={FiArrowRight} className="ml-2 w-5 h-5" />
           </button>

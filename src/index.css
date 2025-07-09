@@ -20,7 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  color: #1a202c;
+  @apply text-gray-900 dark:text-gray-100;
+  @apply bg-white dark:bg-gray-900;
 }
 
 /* Arabic font support */
@@ -38,7 +39,7 @@ html[dir="rtl"] {
   text-align: right;
 }
 
-html[dir="rtl"] .flex {
+html[dir="rtl"] .flex:not(.flex-col) {
   flex-direction: row-reverse;
 }
 
@@ -85,10 +86,65 @@ html[data-high-contrast="true"] .border-gray-300 {
   border-color: #000000 !important;
 }
 
+/* ADHD mode */
+html[data-adhd-mode="true"] {
+  --adhd-background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+}
+
+html[data-adhd-mode="true"] body {
+  background: var(--adhd-background);
+}
+
+html[data-adhd-mode="true"].dark body {
+  --adhd-background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  background: var(--adhd-background);
+}
+
+html[data-adhd-mode="true"] p,
+html[data-adhd-mode="true"] h1,
+html[data-adhd-mode="true"] h2,
+html[data-adhd-mode="true"] h3,
+html[data-adhd-mode="true"] h4,
+html[data-adhd-mode="true"] h5,
+html[data-adhd-mode="true"] h6 {
+  max-width: 65ch;
+  line-height: 1.7;
+}
+
+html[data-adhd-mode="true"] section {
+  padding: 2.5rem 0;
+}
+
+html[data-adhd-mode="true"] .adhd-focus {
+  border-left: 4px solid #1877f2;
+  padding-left: 1rem;
+}
+
+/* Eye comfort mode */
+html[data-eye-comfort="true"] {
+  filter: sepia(10%) brightness(100%) contrast(90%);
+}
+
+html[data-eye-comfort="true"].dark {
+  filter: sepia(10%) brightness(90%) contrast(85%);
+}
+
+html[data-eye-comfort="true"] body {
+  background-color: #f8f9fa;
+}
+
+html[data-eye-comfort="true"].dark body {
+  background-color: #1a1c20;
+}
+
 /* Focus indicators for accessibility */
 *:focus {
   outline: 2px solid #1877f2;
   outline-offset: 2px;
+}
+
+.dark *:focus {
+  outline-color: #60a5fa;
 }
 
 /* Reduced motion for accessibility */
@@ -144,15 +200,6 @@ html[data-high-contrast="true"] .border-gray-300 {
   top: 6px;
 }
 
-/* ADHD-friendly design patterns */
-.adhd-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  border-left: 4px solid #1877f2;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  border-radius: 8px;
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -168,7 +215,7 @@ html {
     font-size: 12pt;
     line-height: 1.4;
     color: #000;
-    background: #fff;
+    background: #fff !important;
   }
 }
 
@@ -179,6 +226,10 @@ html {
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #2d3748;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -227,4 +278,9 @@ html {
 #root {
   width: 100%;
   min-height: 100vh;
+}
+
+/* Dark mode transition */
+.dark-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

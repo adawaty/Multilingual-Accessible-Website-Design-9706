@@ -9,6 +9,18 @@ export const useAccessibility = () => {
     return localStorage.getItem('highContrast') === 'true';
   });
 
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true';
+  });
+
+  const [adhdMode, setAdhdMode] = useState(() => {
+    return localStorage.getItem('adhdMode') === 'true';
+  });
+
+  const [eyeComfortMode, setEyeComfortMode] = useState(() => {
+    return localStorage.getItem('eyeComfortMode') === 'true';
+  });
+
   const [reducedMotion, setReducedMotion] = useState(() => {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   });
@@ -22,6 +34,26 @@ export const useAccessibility = () => {
     localStorage.setItem('highContrast', highContrast.toString());
     document.documentElement.setAttribute('data-high-contrast', highContrast.toString());
   }, [highContrast]);
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode.toString());
+    document.documentElement.setAttribute('data-dark-mode', darkMode.toString());
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
+    localStorage.setItem('adhdMode', adhdMode.toString());
+    document.documentElement.setAttribute('data-adhd-mode', adhdMode.toString());
+  }, [adhdMode]);
+
+  useEffect(() => {
+    localStorage.setItem('eyeComfortMode', eyeComfortMode.toString());
+    document.documentElement.setAttribute('data-eye-comfort', eyeComfortMode.toString());
+  }, [eyeComfortMode]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -51,13 +83,31 @@ export const useAccessibility = () => {
     setHighContrast(!highContrast);
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const toggleAdhdMode = () => {
+    setAdhdMode(!adhdMode);
+  };
+
+  const toggleEyeComfortMode = () => {
+    setEyeComfortMode(!eyeComfortMode);
+  };
+
   return {
     fontSize,
     highContrast,
+    darkMode,
+    adhdMode,
+    eyeComfortMode,
     reducedMotion,
     increaseFontSize,
     decreaseFontSize,
     toggleHighContrast,
+    toggleDarkMode,
+    toggleAdhdMode,
+    toggleEyeComfortMode,
     setFontSize
   };
 };

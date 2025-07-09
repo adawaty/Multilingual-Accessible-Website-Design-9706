@@ -67,7 +67,14 @@
     "skip_to_content": "Skip to main content",
     "toggle_menu": "Toggle navigation menu",
     "language_selector": "Select language",
-    "font_size": "Adjust font size",
-    "high_contrast": "Toggle high contrast mode"
+    "language": "Language",
+    "font_size": "Font Size",
+    "high_contrast": "High Contrast",
+    "dark_mode": "Dark Mode",
+    "adhd_mode": "ADHD Mode",
+    "eye_comfort": "Eye Comfort",
+    "settings": "Accessibility Settings",
+    "customize": "Customize your experience",
+    "theme": "Theme"
   }
 }

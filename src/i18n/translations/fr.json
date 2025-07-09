@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À Propos",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Transformez Votre Présence Numérique avec",
+    "company": "Adawaty",
+    "subtitle": "Experts en Conception Web, SEO et Solutions IA pour Entreprises Modernes",
+    "description": "Nous nous spécialisons dans la création de sites web époustouflants, l'implémentation de stratégies SEO de pointe et le développement de solutions alimentées par l'IA qui génèrent de vrais résultats pour votre entreprise.",
+    "cta_primary": "Consultation Gratuite",
+    "cta_secondary": "Voir Notre Travail",
+    "trusted_by": "Fait confiance par plus de 500 entreprises dans le monde"
+  },
+  "services": {
+    "title": "Notre Expertise",
+    "subtitle": "Solutions numériques complètes adaptées à vos besoins",
+    "web_design": {
+      "title": "Conception et Développement Web",
+      "description": "Sites web personnalisés et responsifs qui convertissent les visiteurs en clients"
+    },
+    "seo": {
+      "title": "Optimisation SEO",
+      "description": "Stratégies SEO basées sur les données qui améliorent votre classement dans les moteurs de recherche"
+    },
+    "ai": {
+      "title": "Solutions IA",
+      "description": "Automatisation intelligente et outils alimentés par l'IA pour la croissance des entreprises"
+    },
+    "edtech": {
+      "title": "Solutions EdTech",
+      "description": "Plateformes de technologie éducative qui améliorent les expériences d'apprentissage"
+    }
+  },
+  "about": {
+    "title": "Pourquoi Choisir Adawaty ?",
+    "subtitle": "Votre succès est notre mission",
+    "experience": "Plus de 5 Ans d'Expérience",
+    "projects": "Plus de 500 Projets Complétés",
+    "clients": "98% Satisfaction Client",
+    "team": "Équipe d'Experts"
+  },
+  "contact": {
+    "title": "Prêt à Commencer ?",
+    "subtitle": "Discutons de votre projet et créons quelque chose d'incroyable ensemble",
+    "form": {
+      "name": "Nom Complet",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "service": "Service Requis",
+      "message": "Détails du Projet",
+      "submit": "Envoyer le Message"
+    }
+  },
+  "footer": {
+    "description": "Adawaty est une entreprise leader en conception web et logiciels spécialisée dans les solutions SEO, IA et EdTech.",
+    "quick_links": "Liens Rapides",
+    "services_title": "Services",
+    "contact_info": "Informations de Contact",
+    "rights": "Tous droits réservés."
+  },
+  "accessibility": {
+    "skip_to_content": "Aller au contenu principal",
+    "toggle_menu": "Basculer le menu de navigation",
+    "language_selector": "Sélectionner la langue",
+    "font_size": "Ajuster la taille de la police",
+    "high_contrast": "Basculer le mode de contraste élevé"
+  }
+}

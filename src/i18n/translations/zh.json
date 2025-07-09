@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "首頁",
+    "services": "服務",
+    "about": "關於我們",
+    "portfolio": "作品集",
+    "contact": "聯絡我們",
+    "blog": "部落格"
+  },
+  "hero": {
+    "title": "透過以下方式轉變您的數位形象",
+    "company": "Adawaty",
+    "subtitle": "現代企業的網頁設計、SEO 和 AI 解決方案專家",
+    "description": "我們專門創建令人驚豔的網站、實施尖端的 SEO 策略，以及開發為您的業務帶來真實成果的 AI 驅動解決方案。",
+    "cta_primary": "免費諮詢",
+    "cta_secondary": "查看我們的作品",
+    "trusted_by": "全球超過 500 家公司信賴"
+  },
+  "services": {
+    "title": "我們的專業",
+    "subtitle": "為您的需求量身定制的綜合數位解決方案",
+    "web_design": {
+      "title": "網頁設計與開發",
+      "description": "將訪客轉換為客戶的客製化響應式網站"
+    },
+    "seo": {
+      "title": "SEO 優化",
+      "description": "數據驅動的 SEO 策略，提升您的搜尋排名"
+    },
+    "ai": {
+      "title": "AI 解決方案",
+      "description": "促進業務增長的智能自動化和 AI 驅動工具"
+    },
+    "edtech": {
+      "title": "教育科技解決方案",
+      "description": "增強學習體驗的教育技術平台"
+    }
+  },
+  "about": {
+    "title": "為什麼選擇 Adawaty？",
+    "subtitle": "您的成功是我們的使命",
+    "experience": "超過 5 年經驗",
+    "projects": "完成超過 500 個專案",
+    "clients": "98% 客戶滿意度",
+    "team": "專家團隊"
+  },
+  "contact": {
+    "title": "準備開始了嗎？",
+    "subtitle": "讓我們討論您的專案，一起創造令人驚豔的成果",
+    "form": {
+      "name": "全名",
+      "email": "電子郵件地址",
+      "phone": "電話號碼",
+      "service": "所需服務",
+      "message": "專案詳情",
+      "submit": "發送訊息"
+    }
+  },
+  "footer": {
+    "description": "Adawaty 是專門從事 SEO、AI 和 EdTech 解決方案的領先網頁設計和軟體公司。",
+    "quick_links": "快速連結",
+    "services_title": "服務",
+    "contact_info": "聯絡資訊",
+    "rights": "版權所有。"
+  },
+  "accessibility": {
+    "skip_to_content": "跳至主要內容",
+    "toggle_menu": "切換導覽選單",
+    "language_selector": "選擇語言",
+    "font_size": "調整字體大小",
+    "high_contrast": "切換高對比模式"
+  }
+}

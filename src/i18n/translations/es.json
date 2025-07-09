@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "portfolio": "Portafolio",
+    "contact": "Contacto",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Transforma Tu Presencia Digital con",
+    "company": "Adawaty",
+    "subtitle": "Expertos en Diseño Web, SEO y Soluciones de IA para Empresas Modernas",
+    "description": "Nos especializamos en crear sitios web impresionantes, implementar estrategias SEO de vanguardia y desarrollar soluciones impulsadas por IA que generan resultados reales para tu negocio.",
+    "cta_primary": "Consulta Gratuita",
+    "cta_secondary": "Ver Nuestro Trabajo",
+    "trusted_by": "Confiado por más de 500 empresas en todo el mundo"
+  },
+  "services": {
+    "title": "Nuestra Experiencia",
+    "subtitle": "Soluciones digitales integrales adaptadas a tus necesidades",
+    "web_design": {
+      "title": "Diseño y Desarrollo Web",
+      "description": "Sitios web personalizados y responsivos que convierten visitantes en clientes"
+    },
+    "seo": {
+      "title": "Optimización SEO",
+      "description": "Estrategias SEO basadas en datos que mejoran tu posicionamiento en buscadores"
+    },
+    "ai": {
+      "title": "Soluciones de IA",
+      "description": "Automatización inteligente y herramientas impulsadas por IA para el crecimiento empresarial"
+    },
+    "edtech": {
+      "title": "Soluciones EdTech",
+      "description": "Plataformas de tecnología educativa que mejoran las experiencias de aprendizaje"
+    }
+  },
+  "about": {
+    "title": "¿Por Qué Elegir Adawaty?",
+    "subtitle": "Tu éxito es nuestra misión",
+    "experience": "Más de 5 Años de Experiencia",
+    "projects": "Más de 500 Proyectos Completados",
+    "clients": "98% Satisfacción del Cliente",
+    "team": "Equipo Experto"
+  },
+  "contact": {
+    "title": "¿Listo para Comenzar?",
+    "subtitle": "Hablemos de tu proyecto y creemos algo increíble juntos",
+    "form": {
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "service": "Servicio Necesario",
+      "message": "Detalles del Proyecto",
+      "submit": "Enviar Mensaje"
+    }
+  },
+  "footer": {
+    "description": "Adawaty es una empresa líder en diseño web y software especializada en soluciones de SEO, IA y EdTech.",
+    "quick_links": "Enlaces Rápidos",
+    "services_title": "Servicios",
+    "contact_info": "Información de Contacto",
+    "rights": "Todos los derechos reservados."
+  },
+  "accessibility": {
+    "skip_to_content": "Saltar al contenido principal",
+    "toggle_menu": "Alternar menú de navegación",
+    "language_selector": "Seleccionar idioma",
+    "font_size": "Ajustar tamaño de fuente",
+    "high_contrast": "Alternar modo de alto contraste"
+  }
+}
